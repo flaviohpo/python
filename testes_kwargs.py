@@ -28,3 +28,5 @@ print('Testando funcao 2 kwargs:')
 funcao2('primeiro arg', (), a='primeiro', b='segundo')
 funcao2('primeiro arg', (), key1=1, key2='segundo') # tem que ser desse jeito aqui mesmo, se fizer um dict=({k:v, ...}) da problema
 # o kwargs é modificavel !!!
+# opa, descobri que tbm da pra fazer assim:
+funcao2('primeiro arg', (), **{'key1':'xis', 'key2':'bis'})
