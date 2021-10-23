@@ -1,4 +1,4 @@
-# list comprehensions
+# list basics
 lista = ['a', 'x', 'm', 'g']
 
 print(lista[1:])
@@ -29,3 +29,18 @@ print(f'A lista sorted ficou {lista2}')
 #aplicando list.sort()
 lista.sort()
 print(f'Usando list.sort():\nA lista original fica: {lista}')
+
+#############################
+#### LIST COMPREHENSIONS ####
+#############################
+from math import pi
+print([str(round(pi, i)) for i in range(0, 10)])
+
+# criando uma lista atraves de uma expressão
+print([i**2 for i in range(0,11)])
+
+# criando uma lista a partir de um filtro em outra
+vec = [-4, -2, 0, 2, 4]
+print([x for x in vec if x >= 0])
+# equivalente
+print(list(filter(lambda x : x >= 0, vec)))
