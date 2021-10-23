@@ -44,3 +44,7 @@ vec = [-4, -2, 0, 2, 4]
 print([x for x in vec if x >= 0])
 # equivalente
 print(list(filter(lambda x : x >= 0, vec)))
+
+# adicionando variaveis e textos em uma string
+string_exemplo = f'Bom dia, isso é uma variavel {vec} inserida em uma string'
+print(string_exemplo)
