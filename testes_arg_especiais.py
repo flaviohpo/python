@@ -18,7 +18,7 @@ pos_only_arg(2)
 #pos_only_arg(arg=2) # nao funciona
 
 #kwd_only_arg(2) # nao funciona
-kwd_only_arg(arg=2) # nao funciona
+kwd_only_arg(arg=2) 
 
 combined_example(1, 2, kwd_only=3)
 combined_example(1, standard=2, kwd_only=3)

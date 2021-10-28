@@ -36,5 +36,5 @@ def gera_senha(
         file.close()
 
 
-gera_senha("makerbot", 25, gravar_arquivo=True, copy_to_clipboard=True, diretorio="/home/flaviohpo/Documents/")
+gera_senha("ible", 25, gravar_arquivo=False, copy_to_clipboard=True, diretorio="/home/flaviohpo/Documents/")
 print(gera_senha.__doc__)
