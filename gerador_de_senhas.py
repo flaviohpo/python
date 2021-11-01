@@ -34,5 +34,11 @@ def gera_senha(programa,
         file.close()
 
 
-gera_senha("ible", 25, gravar_arquivo=False, copy_to_clipboard=True, diretorio="/home/flaviohpo/Documents/")
-print(gera_senha.__doc__)
+# gera_senha("paypal", 20, gravar_arquivo=True, copy_to_clipboard=True, diretorio="/home/flavio/Documents/")
+default_args = ["paypal",
+                20,
+                True,
+                True,
+                "/home/flavio/Documents/"]
+  
+gera_senha(default_args[0], default_args[1], default_args[2], default_args[3], default_args[4])

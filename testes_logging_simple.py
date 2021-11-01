@@ -13,16 +13,16 @@ def funcao_foo(texto):
 # da data atual.
 nome_arquivo = f'log-{dt.today().day}-{dt.today().month}-{dt.today().year % 100}.log'
 logging.basicConfig(filename=nome_arquivo,
-                    level=logging.DEBUG,
+                    level=logging.DEBUG, # faz com que todos tipos de log sejam gravados
                     #filemode='w',
                     format='%(asctime)s:%(levelname)s:%(message)s',
                     datefmt='%H:%M:%S')
 
-logging.debug("Isto é uma msg de debug")
-logging.warning("Isto é um warning!")
-logging.info('Isto é uma info')
-logging.error('And non-ASCII stuff, too, like Øresund and Malmö')
+logger = logging.getLogger('root')
 
-
+logger.debug("Isto é uma msg de debug")
+logger.warning("Isto é um warning!")
+logger.info('Isto é uma info')
+logger.error('And non-ASCII stuff, too, like Øresund and Malmö')
 
 funcao_foo("testezin")
