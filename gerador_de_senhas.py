@@ -9,13 +9,11 @@ print(pylint_stdout.read())
 print(pylint_stderr.read())
 
 # gerador de senhas
-def gera_senha(
-    programa,
-    n_digits=8,
-    gravar_arquivo=False,
-    copy_to_clipboard=False,
-    diretorio="/media/flaviohpo/01D7B89E9D82D660/Users/user/Desktop/",
-):
+def gera_senha(programa,
+              n_digits=8,
+              gravar_arquivo=False,
+              copy_to_clipboard=False,
+              diretorio="/media/flaviohpo/01D7B89E9D82D660/Users/user/Desktop/"):
     """
     This function returns an 25 character password
     it may copy the password to clipboard

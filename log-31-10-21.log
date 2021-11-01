@@ -1,0 +1,16 @@
+06:59:55 PM:DEBUG:Isto é uma msg de debug
+06:59:55 PM:WARNING:Isto é um warning!
+06:59:55 PM:INFO:Isto é uma info
+06:59:55 PM:ERROR:And non-ASCII stuff, too, like Øresund and Malmö
+07:00:31:DEBUG:Isto é uma msg de debug
+07:00:31:WARNING:Isto é um warning!
+07:00:31:INFO:Isto é uma info
+07:00:31:ERROR:And non-ASCII stuff, too, like Øresund and Malmö
+%i:00:46:DEBUG:Isto é uma msg de debug
+%i:00:46:WARNING:Isto é um warning!
+%i:00:46:INFO:Isto é uma info
+%i:00:46:ERROR:And non-ASCII stuff, too, like Øresund and Malmö
+19:02:50:DEBUG:Isto é uma msg de debug
+19:02:50:WARNING:Isto é um warning!
+19:02:50:INFO:Isto é uma info
+19:02:50:ERROR:And non-ASCII stuff, too, like Øresund and Malmö
