@@ -13,6 +13,7 @@ class teste(unittest.TestCase):
         self.assertEqual(my_module.divide(2, 1), 2)
 
     def test_divide(self):
+        #self.assertRaises(ValueError, my_module.divide(2,0)) # da pra fazer assim ou...
         with self.assertRaises(ValueError):
             my_module.divide(2, 0)
 
