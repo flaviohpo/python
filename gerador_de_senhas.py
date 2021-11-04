@@ -35,7 +35,7 @@ def gera_senha(programa="teste",
             file.write(senha)
 
 # gera_senha("paypal", 20, gravar_arquivo=True,
-# copy_to_clipboard=True, diretorio="/home/flavio/Documents/")
+# copy_to_clipboard=True, diretorio="/home/flavio/Documents/"
 PARSER = argparse.ArgumentParser()
 
 PARSER.add_argument("-n", "--name",
