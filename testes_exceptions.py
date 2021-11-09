@@ -38,3 +38,13 @@ def teste3():
         print('tenha um bom dia')
 
 teste3()
+
+# quando vem um argumento errado e eu nao quero fazer try,
+# ja quero lançar a exception direto
+def funcao_foo(x):
+    # x tem que ser inteiro
+    if type(x) is not int:
+        raise TypeError
+
+funcao_foo(1)
+funcao_foo('1')
