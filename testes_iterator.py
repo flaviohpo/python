@@ -57,6 +57,22 @@ print('--- Fim do teste ---')
 #################################################################
 #################################################################
 
+# generator expressions
+# são parecidas com list expressions, mas ficam entre (), não entre []
+print('--- Teste produto_escalar com generator expressions ---')
+
+xvector = [1, 1, 2]
+yvector = [2, 2, 1]
+def produto_escalar(v1, v2):
+    return sum(x*y for x,y in zip(v1,v2))
+
+print(produto_escalar(xvector, yvector))
+
+print('--- Fim do teste ---')
+
+#################################################################
+#################################################################
+
 class NumeroPrimo():
     def __init__(self):
         self.__current = 2
