@@ -1,3 +1,5 @@
+#este script so roda em python3.10 pra cima
+
 def print_ponto(ponto=(0,0)):
     match ponto:
         case (0, 0):

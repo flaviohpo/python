@@ -91,9 +91,9 @@ np = NumeroPrimo()
 npi = iter(np)
 print(type(npi))
 print(type(next(npi)))
-print(next(npi))
-print(next(npi))
-print(next(npi))
+print(next(npi)())
+print(next(npi)())
+print(next(npi)())
 
 print('--- Fim do teste ---')
 
