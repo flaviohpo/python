@@ -1,5 +1,6 @@
 from typing import Type
 
+print(f'nome = {__name__}')
 
 def div_by(divisor, dividendo):
     return dividendo / divisor
@@ -37,8 +38,6 @@ def teste3():
         # aparece sempre
         print('tenha um bom dia')
 
-teste3()
-
 # quando vem um argumento errado e eu nao quero fazer try,
 # ja quero lançar a exception direto
 def funcao_foo(x):
@@ -46,5 +45,14 @@ def funcao_foo(x):
     if type(x) is not int:
         raise TypeError
 
-funcao_foo(1)
-funcao_foo('1')
+# teste chaining exception
+b = [1, 2, 3]
+try:
+    a = 1 + 1 + ''
+except Exception as ex1:
+    try:
+        b.remove(4)
+    except Exception as ex2:
+        raise IndexError from ex2
+print('continuou')
+
