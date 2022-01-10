@@ -1,0 +1,8 @@
+{
+    "logger":{
+        "name":"my_logger",
+        "level":"INFO",
+        
+    }
+
+}
