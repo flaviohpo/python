@@ -13,18 +13,39 @@ def gera_senha(programa="teste",
                n_digits=8,
                gravar_arquivo=False,
                copy_to_clipboard=False,
-               diretorio="/home/flavio/Documents/"):
+               diretorio="/home/flavio/Documents/",
+               tipo="alphanumeric"):
     """
     This function returns an 25 character password
     it may copy the password to clipboard
     and also can create a text file with the password
     somewhere.
 
-    usage: gerador_de_senhas.py -n "yahoo" -s 30 -S -c -d "/home/flavio/Documents/python/"
+    usage: gerador_de_senhas.py -n "yahoo" -s 30 -S -c -d "/home/flavio/Documents/python/" -t "alpha"
     """
     senha = ""
+    list_chars = []
+    if tipo == "numeric":
+        for x in range(48,58):
+            list_chars += chr(x)
+    if tipo == "alpha":
+        for x in range(65,91):
+            list_chars += chr(x)
+        for x in range(97,123):
+            list_chars += chr(x)
+    if tipo == 'alphanumeric':
+        for x in range(48,58):
+            list_chars += chr(x)
+        for x in range(97,123):
+            list_chars += chr(x)
+        for x in range(65,91):
+            list_chars += chr(x)
+    if tipo == 'symbol':
+        for x in range(35,127):
+            list_chars += chr(x)
     for num in range(0, n_digits):
-        senha += chr((int(random.SystemRandom(num).random() * 1000) % 90) + 35)
+        x = random.randint(0,len(list_chars)-1)
+        senha += list_chars[x]
     print(f"A senha gerada para {programa} foi: {senha}")
     if copy_to_clipboard is True:
         pyperclip.copy(senha)
@@ -53,7 +74,10 @@ PARSER.add_argument("-c", "--copy",
 PARSER.add_argument("-d", "--dir",
                     help="Diretorio que será gravado o arquivo com o password.",
                     type=str, default="/home/flavio/Documents/")
+PARSER.add_argument("-t", "--tipo", 
+                    help="Tipo de senha: alpha, numeric, alphanumeric, symbol",
+                    type=str, default="alphanumeric")
 
 ARGS = PARSER.parse_args()
 
-gera_senha(ARGS.name, ARGS.size, ARGS.save, ARGS.copy, ARGS.dir)
+gera_senha(ARGS.name, ARGS.size, ARGS.save, ARGS.copy, ARGS.dir, ARGS.tipo)
